@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app=""><!--Directiva inicial de angularjs-->
+<head>
+	<title>Angularjs Taller</title>
+</head>
+
+<!--Aqui va el script angularjs, sin el script no funcionan las directivas angularjs-->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js" ></script>
+
+<body>
+
+	<div>
+		Nombre: <input type="text" ng-model="nombre">
+		<p>Hola mundo mi nombre es: {{nombre}}</p>
+		La siguiente linea funciona con la directiva "bind": <p ng-bind="nombre"></p>
+	</div><!--Fin del div de prueba angularjs-->
+
+	<div>
+		Numero 1: <input type="number" ng-model="numero1">
+		Numero 2: <input type="number" ng-model="numero2">
+
+		La suma de ambos numeros ingresados es: {{numero1 + numero2}}
+	</div><!--Fin del div numerico angularjs-->
+
+	<div ng-init="universidad='UDLA'">
+		<br>
+		El valor inicial en universidad es: <p ng-bind="universidad"></p>
+	</div>
+</body>
+</html>
